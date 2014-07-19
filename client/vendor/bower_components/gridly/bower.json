@@ -1,0 +1,21 @@
+{
+  "name": "gridly",
+  "version": "1.2.4",
+  "main": [ "./javascripts/jquery.gridly.js","./stylesheets/jquery.gridly.css" ],
+  "ignore": 
+  [
+    "**/*.sass",
+    "**/*.coffee",
+    "**/sample.*",
+    "**/rainbow.*",
+    "bourbon",
+    "neat",
+    "packages",
+    "images",
+    "Cakefile",
+    "Gemfile",
+    "Gemfile.*",
+    "index.*"
+  ],
+  "dependencies": { "jquery": "latest" }
+}

@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "sass": {}
+    },
+    "packages": {
+      "sass": {
+        "git": "https://github.com/particle4dev/meteor-sass.git",
+        "tag": "v0.1.7",
+        "commit": "b41757f87475186b1485ec54a819d6e027ee3d88"
+      }
+    }
+  }
+}
