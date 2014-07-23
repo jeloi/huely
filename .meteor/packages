@@ -6,4 +6,7 @@
 standard-app-packages
 autopublish
 insecure
-sass
+iron-router
+scss
+bourbon
+neat

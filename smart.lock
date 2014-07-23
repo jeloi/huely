@@ -2,13 +2,42 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "sass": {}
+      "sass": {},
+      "iron-router": {},
+      "scss": {},
+      "bourbon": {},
+      "neat": {}
     },
     "packages": {
       "sass": {
         "git": "https://github.com/particle4dev/meteor-sass.git",
         "tag": "v0.1.7",
         "commit": "b41757f87475186b1485ec54a819d6e027ee3d88"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "scss": {
+        "git": "https://github.com/fourseven/meteor-scss.git",
+        "tag": "v0.9.3",
+        "commit": "185f3b2787fb85e653f7b7bf603d1493ed14943d"
+      },
+      "bourbon": {
+        "git": "https://github.com/chicagogrooves/meteor-bourbon.git",
+        "tag": "v3.1.8.1",
+        "commit": "b55f0968fe7d4a2886898cd8e81394de066a3ae1"
+      },
+      "neat": {
+        "git": "https://github.com/chicagogrooves/meteor-neat.git",
+        "tag": "v1.5.0",
+        "commit": "6c318cce1c02e822d6a340c547273b29b6379197"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }

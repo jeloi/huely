@@ -1,5 +1,9 @@
 {
   "packages": {
-    "sass": {}
+    "sass": {},
+    "iron-router": {},
+    "scss": {},
+    "bourbon": {},
+    "neat": {}
   }
 }

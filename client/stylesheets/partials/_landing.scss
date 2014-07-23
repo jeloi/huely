@@ -1,0 +1,24 @@
+.landing {
+	display: table;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.landing-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.landing-content {
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
+
+	img {
+		width: 150px;
+	}
+
+	p { margin-bottom: em(5) }
+
+}
