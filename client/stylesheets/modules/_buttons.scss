@@ -1,10 +1,12 @@
 button,
 input[type="submit"] {
-  @extend %button;
+  // @extend %button;
+  @include button();
   @include appearance(none);
   border: none;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  transition: background 0.3s;
 }

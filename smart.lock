@@ -6,7 +6,8 @@
       "iron-router": {},
       "scss": {},
       "bourbon": {},
-      "neat": {}
+      "neat": {},
+      "GAnalytics": {}
     },
     "packages": {
       "sass": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/chicagogrooves/meteor-neat.git",
         "tag": "v1.5.0",
         "commit": "6c318cce1c02e822d6a340c547273b29b6379197"
+      },
+      "GAnalytics": {
+        "git": "https://github.com/datariot/meteor-ganalytics.git",
+        "tag": "v0.2.0",
+        "commit": "2d5e48d5cc4c2f88edd40c0b2341d378bd4a702b"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

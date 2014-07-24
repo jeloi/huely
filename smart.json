@@ -4,6 +4,7 @@
     "iron-router": {},
     "scss": {},
     "bourbon": {},
-    "neat": {}
+    "neat": {},
+    "GAnalytics": {}
   }
 }

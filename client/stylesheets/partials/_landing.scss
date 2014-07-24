@@ -8,6 +8,7 @@
 .landing-wrapper {
 	display: table-cell;
 	vertical-align: middle;
+	padding: 15px;
 }
 
 .landing-content {
@@ -19,6 +20,35 @@
 		width: 150px;
 	}
 
-	p { margin-bottom: em(5) }
+	p { margin-bottom: em(10); color: $gray-dark }
+
+	label { clear: both; color: $light-red; }
+
+}
+
+#mc-form {
+	margin: 0 auto;
+	max-width: 300px;
+}
+
+#mc-email {
+	text-align: center;
+}
+
+@include media($medium-screen-up) {
+
+#mc-form {
+	max-width: 400px;
+	overflow: auto;
+
+	#mc-email { float: left; width: 280px; }
+	button {
+		@include button($light-green);
+		float: left;
+		margin-left: 10px;
+	}
+}
+
+
 
 }

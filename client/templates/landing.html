@@ -4,13 +4,32 @@
 			<div class="landing-content">
 				<img src="/images/huely_logo.png" alt="Huely">
 				<p>A simple tool for extracting and visualizing color palettes from code.</p>
-				<p><strong>Coming in Aug. 2014</strong></p>
 				<form id="mc-form">
-				<input id="mc-email" type="email" placeholder="Email me when launched.">
+					<input id="mc-email" type="email" placeholder="Email me when launched.">
+					<input type="checkbox" value="1" name="group[12057][1]" id="mce-group[12057]-12057-0" style="display: none">
+					<button type="submit" class="u-clearfix">submit</button>
 					<label for="mc-email"></label>
-					<button type="submit">Submit</button>
 				</form>
+				<p><strong>Coming in Aug. 2014</strong></p>
+				<p class="thanks"></p>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$('#mc-form').ajaxChimp({
+		    callback: mailchimpCallback,
+		    url: "http://jeremyh.us8.list-manage.com/subscribe/post?u=300a76d9dd1a2ed016c37bcdb&amp;id=601449e888"
+		});
+
+		function mailchimpCallback(resp) {
+			if (resp.result == "error") {
+				console.log(resp.msg);
+			} else {
+				$("#mc-form").remove();
+				$('.thanks').text("Thanks! We've sent you a confirmation email.")
+			};
+		}
+	</script>
 </template>
+

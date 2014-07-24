@@ -34,9 +34,9 @@ select[multiple=multiple] {
   background-color: white;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
-  box-shadow: $form-box-shadow;
+  // box-shadow: $form-box-shadow;
   font-family: $form-font-family;
-  font-size: $form-font-size;
+  font-size: $base-font-size;
   margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 3) ($base-line-height / 3);
   width: 100%;
@@ -47,7 +47,7 @@ select[multiple=multiple] {
 
   &:focus {
     border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
+    // box-shadow: $form-box-shadow-focus;
     outline: none;
   }
 }
