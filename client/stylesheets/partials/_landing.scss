@@ -35,6 +35,10 @@
 	text-align: center;
 }
 
+.thanks {
+	color: $blue !important;
+}
+
 @include media($medium-screen-up) {
 
 #mc-form {

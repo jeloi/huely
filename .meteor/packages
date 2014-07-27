@@ -10,4 +10,5 @@ iron-router
 scss
 bourbon
 neat
-GAnalytics
+iron-router-ga
+kadira
