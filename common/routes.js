@@ -5,7 +5,7 @@ Router.configure({
 Router.map(function() {
   this.route('landing', {path: '/'});
   this.route('palette');
-  this.route('main', {
-  	path: 'main'
+  this.route('extract', {
+  	path: 'extract'
   })
 });
