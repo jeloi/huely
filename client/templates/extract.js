@@ -6,11 +6,10 @@ Template.extract.helpers({
 /* Events */
 Template.extract.events({
 	'click button': function() {
-
-		Session.set("form", $(".mainform textarea").val());
-		// Session.set("form", "this");
+		var text = $(".mainform textarea").val();
+		Huely.extract(text);
 		Router.go('palette');
-		console.log("got here!");
+		console.log("text");
 		return false;
 	}
 })
