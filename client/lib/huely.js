@@ -2,19 +2,19 @@
 Huely = {};
 
 Huely.extract = function(string) {
-	Session.set("form", string);
-	console.log("this is where extraction magic happens!");
+	console.log("Calling Huely.extract() with "+string);
 	/* Regular Expression Components */
-	var hex6Char = "(#(\\d|[a-f]){6})\\W",
-		hex3Char = "(#(\\d|[a-f]){3}\\W)",
+	var hexChar = "(#(\\d|[a-f]){3})(\\W|\$|(\\d|[a-f]){3})",
 		rgb = "(rgb\\(\\d{1,3},( )*\\d{1,3},( )*\\d{1,3}\\))",
 		rgba = "(rgba\\(\\d{1,3},( )*\\d{1,3},( )*\\d{1,3},( )*((\\d.?\\d+)|\\d)\\))",
 		sassVariable = "(\\$\\S*:\\s*)?",
 		lessVariable = "(@\\S*:\\s*)?";
 
-	var expression = "(("+sassVariable+"|"+lessVariable+")("+hex6Char+"|"+hex3Char+"|"+rgb+"|"+rgba+"))";
+	var expression = "(("+sassVariable+"|"+lessVariable+")("+hexChar+"|"+rgb+"|"+rgba+"))";
 
 	var regExp = new RegExp(expression, "gi");
+
+	console.log(regExp);
 
 	var matches = string.match(regExp);
 
@@ -36,7 +36,7 @@ Huely.extract = function(string) {
 		}
 	})
 
-	console.log(dict);
+	// console.log(dict);
 
 	return dict;
 }
