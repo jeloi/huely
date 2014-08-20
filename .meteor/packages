@@ -6,9 +6,9 @@
 standard-app-packages
 autopublish
 insecure
-iron-router
 scss
 bourbon
 neat
-iron-router-ga
 kadira
+iron-router
+iron-router-ga
