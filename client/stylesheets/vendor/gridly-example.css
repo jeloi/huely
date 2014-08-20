@@ -71,43 +71,4 @@ pre .string.value {
       height: 420px; }
     .example .swatch.dragging {
       opacity: 0.8; }
-    .example .swatch:nth-child(20n + 1) {
-      background: #1abc9c; }
-    .example .swatch:nth-child(20n + 2) {
-      background: #16a085; }
-    .example .swatch:nth-child(20n + 3) {
-      background: #2ecc71; }
-    .example .swatch:nth-child(20n + 4) {
-      background: #27ae60; }
-    .example .swatch:nth-child(20n + 5) {
-      background: #3498db; }
-    .example .swatch:nth-child(20n + 6) {
-      background: #2980b9; }
-    .example .swatch:nth-child(20n + 7) {
-      background: #9b59b6; }
-    .example .swatch:nth-child(20n + 8) {
-      background: #8e44ad; }
-    .example .swatch:nth-child(20n + 9) {
-      background: #34495e; }
-    .example .swatch:nth-child(20n + 10) {
-      background: #2c3e50; }
-    .example .swatch:nth-child(20n + 11) {
-      background: #f1c40f; }
-    .example .swatch:nth-child(20n + 12) {
-      background: #f39c12; }
-    .example .swatch:nth-child(20n + 13) {
-      background: #e67e22; }
-    .example .swatch:nth-child(20n + 14) {
-      background: #d35400; }
-    .example .swatch:nth-child(20n + 15) {
-      background: #e74c3c; }
-    .example .swatch:nth-child(20n + 16) {
-      background: #c0392b; }
-    .example .swatch:nth-child(20n + 17) {
-      background: #ecf0f1; }
-    .example .swatch:nth-child(20n + 18) {
-      background: #bdc3c7; }
-    .example .swatch:nth-child(20n + 19) {
-      background: #95a5a6; }
-    .example .swatch:nth-child(20n + 20) {
-      background: #7f8c8d; }
+   
