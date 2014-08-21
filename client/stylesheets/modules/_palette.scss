@@ -1,0 +1,10 @@
+.palette {
+	@include outer-container;
+	margin: 0 auto;
+	// font-family: "source-code-pro",sans-serif;
+	font-family: "inconsolata",sans-serif;
+	font-size: 13px;
+	color: $gray-darker;
+	text-align: center;
+	font-weight: bold;
+}

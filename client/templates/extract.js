@@ -7,8 +7,9 @@ Template.extract.helpers({
 Template.extract.events({
 	'click button': function(e) {
 		e.preventDefault();
-		var text = $(".mainform textarea").val();
-		extractSwatches(text);
+		var code = $(".mainform textarea").val();
+		extractSwatches(code);
+		Session.set("code", code);
 		Router.go('palette');
 		return false;
 	}
