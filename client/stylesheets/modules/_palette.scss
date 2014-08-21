@@ -2,20 +2,17 @@
 	// @include outer-container;
 	max-width: none !important;
 	margin: 0 auto;
-	// font-family: "source-code-pro",sans-serif;
-	font-family: "inconsolata",sans-serif;
-	font-size: 13px;
-	color: $gray-darker;
-	text-align: center;
-	font-weight: bold;
-}
 
-.gridly {
 	position: relative;
 	width: 780px;
 }
 
+.gridly {
+
+}
+
 .swatch-item {
+	position: relative;
 	&.small {
 		width: 140px;
 		height: 160px;
@@ -25,9 +22,16 @@
 	}
 	&.large {
 		width: 300px;
-		height: 320px;
+		height: 340px;
 		.swatch-item__swatch {
-			height: 320px;
+			&--circle {
+				// margin-top: 10px;
+				height: 300px;
+				margin-bottom: 20px;
+			}
+			&--square {
+				height: 320px;
+			}
 		}
 	}
 	&.dragging {
@@ -36,11 +40,23 @@
 
 	}
 	.swatch-item__swatch {
-		transition: all 0.2s ease;
+		transition: all 0.4s ease-in-out;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
 	}
-	.swatch-item__swatch--circle {
-		border-radius: 50%;
-	}
-	.swatch-item__swatch--square {
-		border-radius: 0;
+		.swatch-item__swatch--circle {
+			border-radius: 50%;
+		}
+		.swatch-item__swatch--square {
+			border-radius: 0;
+		}
+
+	.swatch-item__text {
+		padding-top: 2px;
+		font-family: "inconsolata",sans-serif;
+		font-size: 13px;
+		color: $gray-darker;
+		text-align: center;
+		font-weight: bold;
 	}

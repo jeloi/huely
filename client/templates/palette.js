@@ -42,7 +42,6 @@ Template.palette.events({
 		event.stopPropagation();
 		var $this, height, width;
 		$this = $(event.currentTarget);
-		console.log($this);
 		$this.toggleClass('small');
 		$this.toggleClass('large');
 		if ($this.hasClass('small')) {
