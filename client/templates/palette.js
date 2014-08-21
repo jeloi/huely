@@ -104,7 +104,7 @@ Template.palette.events({
 		$this.closest('.swatch').remove();
 		return $('.gridly').gridly('layout');
 	},
-	'click .gridly .swatch-item__text': function(event) {
+	'click .gridly .swatch-item__label': function(event) {
 		$this = $(event.currentTarget);
 		$this.select()
 		console.log($this);
