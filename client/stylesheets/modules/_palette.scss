@@ -53,7 +53,6 @@
 	input.swatch-item__label {
 		width: 100%;
 		padding-top: 4px;
-		// font-family: "inconsolata",sans-serif;
 		font-weight: 600;
 		font-size: 13px;
 		text-align: center;
@@ -89,7 +88,7 @@
 		color: $gray-dark;
 
 		&:hover, &.active {
-			color: $gray-darker;
+			color: $gray-darkest;
 		}
 	}
 
@@ -101,10 +100,8 @@
 		float: left;
 	}
 
-
-	.toolbar__shape--circle {
-		
-	}
-	.toolbar__shape--circle {
-		
+	.toggle-varName, .toggle-colorVal {
+		font-size: 18px;
+		margin-top: -3px;
+		font-family: $code-font-family;
 	}

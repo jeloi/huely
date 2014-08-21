@@ -59,14 +59,20 @@ Template.palette.helpers({
 	circleSwatchActive: function() {
 		return (Session.get("swatchStyle") == "square" ? "" : "active")
 	},
+	varLabelActive: function() {
+		return (Session.get("swatchLabel") == "colorVal" ? "" : "active")
+	},
+	colorValLabelActive: function() {
+		return (Session.get("swatchLabel") == "colorVal" ? "active" : "")
+	},
 
 	/* Swatch template helpers */
 	// The name or the value of the swatch.
 	swatchLabel: function() {
 		if (Session.get("swatchLabel") == "colorVal") {
 			return this.colorVal;
-		} else if (Session.get("swatchLabel") == "varName") {
-			return this.varName || "undefined";
+		// } else if (Session.get("swatchLabel") == "varName") {
+		// 	return this.varName || "undefined";
 		} else {
 			return this.varName || this.colorVal;
 		}
@@ -123,7 +129,15 @@ Template.palette.events({
 	},
 	'click .toolbar .toggle-square': function(event) {
 		Session.set("swatchStyle", "square");
+	},
+	'click .toolbar .toggle-varName': function(event) {
+		Session.set("swatchLabel", "varName");
+	},
+	'click .toolbar .toggle-colorVal': function(event) {
+		Session.set("swatchLabel", "colorVal");
 	}
+
+
 	//, 'click .add': function(event) {
 	// 	event.preventDefault();
 	// 	event.stopPropagation();
