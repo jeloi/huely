@@ -1,6 +1,12 @@
 <template name="palette">
 	<div class="container">
-		<section class='palette example gridly container'>
+
+		<div class="toolbar">
+			<div class="toolbar__toggle toolbar__shape">Circle</div>
+			<div class="toolbar__toggle toolbar__label">Default</div>
+		</div>
+
+		<section class='palette example gridly'>
 			{{#each swatches}}
 			<div class='swatch-item small'>
 				<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>

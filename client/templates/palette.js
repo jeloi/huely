@@ -15,6 +15,13 @@ Template.palette.rendered = function () {
 	        selector: '> *'
 	      }
 	  });
+	var waiter;
+	$('.palette .swatch-item').each(function(index, el) {
+		setTimeout(function() {
+			$(el).addClass('fade-in');
+		}, Math.floor(index/5)*100);
+		
+	});
 };
 
 /* Helpers */
@@ -22,9 +29,12 @@ Template.palette.helpers({
 	swatches: function() {
 		return Swatches.find();
 	},
-	/**
-	 * Swatch template helpers
-	 */
+	swatchCount: function() {
+		return Swatches.find().count();
+	},
+
+	/* Swatch template helpers */
+
 	// The name or the value of the swatch.
 	nameOrVal: function() {
 		return this.varName || this.colorVal;

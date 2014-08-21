@@ -10,3 +10,8 @@ $.fn.highlight = function (str, className) {
         });
     });
 };
+
+
+// $(document).ready(function() {
+//     $('.content').addClass('fade-in');
+// });

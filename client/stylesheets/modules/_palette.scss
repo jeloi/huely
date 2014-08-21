@@ -1,8 +1,6 @@
 .palette {
-	// @include outer-container;
 	max-width: none !important;
 	margin: 0 auto;
-
 	position: relative;
 	width: 780px;
 }
@@ -53,15 +51,30 @@
 		}
 
 	.swatch-item__text {
+		width: 100%;
 		padding-top: 2px;
 		font-family: "inconsolata",sans-serif;
+		font-weight: bold;
 		font-size: 13px;
 		text-align: center;
-		font-weight: bold;
 		border: 0 !important;
 		background: none;
 		line-height: 1.1;
 		&:focus {
 			outline: none;
 		}
+	}
+
+.toolbar {
+	text-align: center;
+	}
+	.toolbar__toggle {
+		display: inline-block;
+		cursor: pointer;
+	}
+	.toolbar__shape--circle {
+		
+	}
+	.toolbar__shape--circle {
+		
 	}

@@ -29,6 +29,7 @@
 // Partials
 
 @import "partials/landing";
+@import "partials/extract";
 
 body {
 	// background: #646464;
@@ -37,9 +38,16 @@ body {
 	}
 }
 
-.extract {
-	textarea {
-		font-family: "inconsolata",sans-serif;
-		font-size: 14px;
+.swatch-item {
+	opacity: 0;
+
+	-webkit-transition: opacity 0.3s ease-in-out;
+	   -moz-transition: opacity 0.3s ease-in-out;
+	    -ms-transition: opacity 0.3s ease-in-out;
+	     -o-transition: opacity 0.3s ease-in-out;
+	        transition: opacity 0.3s ease-in-out;
+
+	&.fade-in {
+		opacity: 1;
 	}
 }
