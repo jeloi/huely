@@ -1,14 +1,16 @@
 <template name="palette">
-	<section class='palette example gridly container'>
-		{{#each swatches}}
-		<div class='swatch-item small'>
-			<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
-			<!-- <a class='delete' href='#'>&times;</a> -->
-			<div class="swatch-item__text">{{nameOrVal}}</div>
-		</div>
-		{{/each}}
-<!-- 		<p class='actions'>
-			<a class='add button' href='#'>Add</a>
-		</p> -->
-	</section>
+	<div class="container">
+		<section class='palette example gridly container'>
+			{{#each swatches}}
+			<div class='swatch-item small'>
+				<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
+				<!-- <a class='delete' href='#'>&times;</a> -->
+				<div class="swatch-item__text">{{nameOrVal}}</div>
+			</div>
+			{{/each}}
+		<!-- 		<p class='actions'>
+				<a class='add button' href='#'>Add</a>
+			</p> -->
+		</section>
+	</div>
 </template>

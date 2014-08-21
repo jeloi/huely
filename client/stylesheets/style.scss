@@ -32,4 +32,7 @@
 
 body {
 	// background: #646464;
+	&::-webkit-scrollbar { 
+	    display: none; 
+	}
 }
