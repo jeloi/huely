@@ -1,23 +1,9 @@
 <template name="palette">
-	<style type="text/css">
-		.gridly {
-			position: relative;
-			width: 960px;
-		}
-		.swatch.small {
-			width: 140px;
-			height: 180px;
-		}
-		.swatch.large {
-			width: 300px;
-			height: 300px;
-		}
-	</style>
 	<section class='palette example gridly container'>
 		{{#each swatches}}
-		<div class='swatch small'>
-			<div class="swatch__color" style="background-color: {{colorVal}}; height: 180px"></div>
-			<a class='delete' href='#'>&times;</a>
+		<div class='swatch-item small'>
+			<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
+			<!-- <a class='delete' href='#'>&times;</a> -->
 			<div>{{nameOrVal}}</div>
 		</div>
 		{{/each}}

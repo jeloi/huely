@@ -9,7 +9,7 @@ Template.palette.rendered = function () {
 	$('.gridly').gridly({
 	      base: 60, // px 
 	      gutter: 20, // px
-	      columns: 12
+	      columns: 10
 	  });
 };
 
@@ -18,15 +18,26 @@ Template.palette.helpers({
 	swatches: function() {
 		return Swatches.find();
 	},
-	// The name or the value of the swatch. Context: swatch
+	/**
+	 * Swatch template helpers
+	 */
+	// The name or the value of the swatch.
 	nameOrVal: function() {
 		return this.varName || this.colorVal;
+	},
+	// Circle or Square style swatch color
+	swatchStyle: function() {
+		if (Session.get("swatchStyle") == "square") {
+			return	"swatch-item__swatch--square";
+		} else {
+			return	"swatch-item__swatch--circle";
+		}
 	}
 });
 
 /* Events */
 Template.palette.events({
-	'click .gridly .swatch': function(event) {
+	'click .gridly .swatch-item': function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 		var $this, height, width;
@@ -36,11 +47,11 @@ Template.palette.events({
 		$this.toggleClass('large');
 		if ($this.hasClass('small')) {
 			width = 140;
-			height = 200;
+			height = 160;
 		}
 		if ($this.hasClass('large')) {
 			width = 300;
-			height = 420;
+			height = 340;
 		}
 		$this.data('width', width);
 		$this.data('height', height);
