@@ -3,8 +3,12 @@
 
 		<div class="toolbar">
 			<div class="toolbar__left u-float-left">
-				<div class="toolbar__toggle toolbar__variable">Circles</div>
-				<div class="toolbar__toggle toolbar__circle">Squares</div>
+				<div class="toolbar__toggle toggle-circle {{circleSwatchActive}}">
+					<i class="fa fa-circle-thin"></i>
+				</div>
+				<div class="toolbar__toggle toggle-square {{squareSwatchActive}}">
+					<i class="fa fa-square-o"></i>
+				</div>
 			</div>
 
 			<div class="toolbar__center">{{swatchCount}} {{pluralize swatchCount "color" "colors"}}</div>

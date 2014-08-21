@@ -53,6 +53,12 @@ Template.palette.helpers({
 	codeViewActive: function() {
 		return (Session.get("paletteView") == "code" ? "active" : "");
 	},
+	squareSwatchActive: function() {
+		return (Session.get("swatchStyle") == "square" ? "active" : "")
+	},
+	circleSwatchActive: function() {
+		return (Session.get("swatchStyle") == "square" ? "" : "active")
+	},
 
 	/* Swatch template helpers */
 	// The name or the value of the swatch.
@@ -77,6 +83,7 @@ Template.palette.helpers({
 
 /* Events */
 Template.palette.events({
+	// Click animation functionality
 	'click .gridly .swatch-item__swatch': function(event) {
 		event.preventDefault();
 		event.stopPropagation();
@@ -96,6 +103,7 @@ Template.palette.events({
 		$this.data('height', height);
 		return $('.gridly').gridly('layout');
 	},
+	// Remove a swatch
 	'click .gridly .delete': function(event) {
 		var $this;
 		event.preventDefault();
@@ -104,11 +112,17 @@ Template.palette.events({
 		$this.closest('.swatch').remove();
 		return $('.gridly').gridly('layout');
 	},
+	// Select the label input when clicked
 	'click .gridly .swatch-item__label': function(event) {
 		$this = $(event.currentTarget);
 		$this.select()
-		console.log($this);
-		
+	},
+	/* Toolbar Toggles */
+	'click .toolbar .toggle-circle': function(event) {
+		Session.set("swatchStyle", "circle");
+	},
+	'click .toolbar .toggle-square': function(event) {
+		Session.set("swatchStyle", "square");
 	}
 	//, 'click .add': function(event) {
 	// 	event.preventDefault();
