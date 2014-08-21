@@ -50,7 +50,7 @@
 			border-radius: 0;
 		}
 
-	input.swatch-item__text {
+	input.swatch-item__label {
 		width: 100%;
 		padding-top: 4px;
 		// font-family: "inconsolata",sans-serif;
@@ -66,12 +66,42 @@
 	}
 
 .toolbar {
-	text-align: center;
+		position: relative;
+		margin: 7px 0 13px;
+		overflow: hidden;
+		font-size: 16px;
 	}
+	.toolbar__center {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		font-weight: 600;
+		z-index: 0;
+	}
+
 	.toolbar__toggle {
-		display: inline-block;
+		display: block;
 		cursor: pointer;
+		position: relative;
+		padding: 0 0.5em;
+		transition: color 0.3s;
+		z-index: 1;
+		color: $gray-dark;
+
+		&:hover, &.active {
+			color: $gray-darker;
+		}
 	}
+
+	.toolbar__right > * {
+		float: right;
+	}
+
+	.toolbar__left > * {
+		float: left;
+	}
+
+
 	.toolbar__shape--circle {
 		
 	}

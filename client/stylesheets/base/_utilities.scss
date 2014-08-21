@@ -1,3 +1,11 @@
 .u-clearfix {
 	@include clearfix;
 }
+
+.u-float-left {
+	float: left;
+}
+
+.u-float-right {
+	float: right;
+}

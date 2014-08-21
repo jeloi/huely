@@ -3,6 +3,11 @@ Template.palette.created = function () {
 	if (Swatches.find().count() == 0) {
 		Router.go('extract')
 	};
+
+	sessionGetSet("swatchStyle", "circle");
+	sessionGetSet("swatchLabel", "default");
+	Session.set("paletteView", "palette");
+	
 };
 
 Template.palette.rendered = function () {
@@ -15,7 +20,6 @@ Template.palette.rendered = function () {
 	        selector: '> *'
 	      }
 	  });
-	var waiter;
 	$('.palette .swatch-item').each(function(index, el) {
 		setTimeout(function() {
 			$(el).addClass('fade-in');
@@ -33,11 +37,33 @@ Template.palette.helpers({
 		return Swatches.find().count();
 	},
 
-	/* Swatch template helpers */
+	/* General Utility helpers */
+	pluralize: function(count, singular, plural) {
+		if (count == 1) {
+			return singular;
+		} else {
+			return	plural;
+		}
+	},
 
+	/* Toolbar Toggles */
+	paletteViewActive: function() {
+		return (Session.get("paletteView") == "code" ? "" : "active");
+	},
+	codeViewActive: function() {
+		return (Session.get("paletteView") == "code" ? "active" : "");
+	},
+
+	/* Swatch template helpers */
 	// The name or the value of the swatch.
-	nameOrVal: function() {
-		return this.varName || this.colorVal;
+	swatchLabel: function() {
+		if (Session.get("swatchLabel") == "colorVal") {
+			return this.colorVal;
+		} else if (Session.get("swatchLabel") == "varName") {
+			return this.varName || "undefined";
+		} else {
+			return this.varName || this.colorVal;
+		}
 	},
 	// Circle or Square style swatch color
 	swatchStyle: function() {
