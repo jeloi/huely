@@ -2,7 +2,6 @@
 Huely = {};
 
 Huely.extract = function(string) {
-	console.log("Calling Huely.extract() with "+string);
 	/* Regular Expression Components */
 	var hexChar = "(#(\\d|[a-f]){3})(\\W|\$|(\\d|[a-f]){3})",
 		rgb = "(rgb\\(\\d{1,3},( )*\\d{1,3},( )*\\d{1,3}\\))",

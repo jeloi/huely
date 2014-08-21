@@ -9,7 +9,11 @@ Template.palette.rendered = function () {
 	$('.gridly').gridly({
 	      base: 60, // px 
 	      gutter: 20, // px
-	      columns: 10
+	      columns: 10,
+	      draggable: {
+	        zIndex: 800,
+	        selector: '> *'
+	      }
 	  });
 };
 
@@ -37,11 +41,11 @@ Template.palette.helpers({
 
 /* Events */
 Template.palette.events({
-	'click .gridly .swatch-item': function(event) {
+	'click .gridly .swatch-item__swatch': function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 		var $this, height, width;
-		$this = $(event.currentTarget);
+		$this = $(event.currentTarget).parent();
 		$this.toggleClass('small');
 		$this.toggleClass('large');
 		if ($this.hasClass('small')) {
@@ -63,6 +67,12 @@ Template.palette.events({
 		$this = $(event.currentTarget);
 		$this.closest('.swatch').remove();
 		return $('.gridly').gridly('layout');
+	},
+	'click .gridly .swatch-item__text': function(event) {
+		$this = $(event.currentTarget);
+		$this.select()
+		console.log($this);
+		
 	}
 	//, 'click .add': function(event) {
 	// 	event.preventDefault();

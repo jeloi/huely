@@ -8,7 +8,7 @@
 @import "base/bitters";
 @import "packages/neat/neat";
 @import "base/base";
-@import "base/utilities";
+// @import "base/utilities";
 
 
 // Layouts
@@ -18,7 +18,7 @@
 // Modules
 
 // Typography and Elements
-@import "modules/forms";
+// @import "modules/forms";
 // @import "modules/tables";
 // @import "modules/lists";
 // @import "modules/flashes";
@@ -34,5 +34,12 @@ body {
 	// background: #646464;
 	&::-webkit-scrollbar { 
 	    display: none; 
+	}
+}
+
+.extract {
+	textarea {
+		font-family: "inconsolata",sans-serif;
+		font-size: 14px;
 	}
 }
