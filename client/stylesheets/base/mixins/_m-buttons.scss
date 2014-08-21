@@ -15,4 +15,9 @@
 	    color: white;
 	  }
 
+	  &:focus {
+	    border: 1px solid darken($base-color, 10);
+	    outline: none;
+	}
+
 }

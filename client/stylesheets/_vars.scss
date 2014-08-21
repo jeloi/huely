@@ -2,7 +2,7 @@
     $COLORS
 \*------------------------------------*/
 
-$blue: #477DCA;
+$blue: #A4C8FA;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
@@ -11,7 +11,7 @@ $light-yellow: #FFF6BF;
 $light-green: #B8E986;
 
 // Grays
-$gray-lightest:     #F8F8F8;
+$gray-lightest:     #FCFCFC;
 $gray-lighter:      #EEEEEE;
 $gray-light:        #DDDDDD;
 $gray:              #CCCCCC;
@@ -24,16 +24,16 @@ $base-background-color: white;
 
 // Font Colors
 $base-font-color: $gray-darker;
-$base-accent-color: $blue;
+$base-accent-color: #6BCA6A;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
+$hover-link-color: pink;
+$base-button-color: $base-accent-color;
+$hover-button-color: red;
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: $gray-lighter;
 
 // Flash Colors
 $alert-color: $light-yellow;
@@ -62,7 +62,7 @@ $header-font-family: $base-font-family;
 // Forms
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
-$form-border-color-focus: $base-accent-color;
+$form-border-color-focus: $blue;
 $form-border-radius: $base-border-radius;
 $form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);

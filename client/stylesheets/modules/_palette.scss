@@ -33,7 +33,7 @@
 		}
 	}
 	&.dragging {
-		opacity: 0.8;
+		opacity: 0.8 !important;
 	}
 
 	}
@@ -50,11 +50,11 @@
 			border-radius: 0;
 		}
 
-	.swatch-item__text {
+	input.swatch-item__text {
 		width: 100%;
-		padding-top: 2px;
-		font-family: "inconsolata",sans-serif;
-		font-weight: bold;
+		padding-top: 4px;
+		// font-family: "inconsolata",sans-serif;
+		font-weight: 600;
 		font-size: 13px;
 		text-align: center;
 		border: 0 !important;
