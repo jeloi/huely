@@ -70,6 +70,10 @@ Template.palette.helpers({
 		return (Session.get("swatchLabel") == "colorVal" ? "active" : "")
 	},
 
+	paletteView: function() {
+		return (Session.get("resultView") == "code" ? false : true);
+	},
+
 	/* Swatch template helpers */
 	// The name or the value of the swatch.
 	swatchLabel: function() {

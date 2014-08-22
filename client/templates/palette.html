@@ -20,24 +20,25 @@
 		</div>
 		
 		<div class="palette-content">
-			{{#if paletteViewActive }}
-				<section class='palette gridly'>
-					{{#each swatches}}
-					<div class='swatch-item small'>
-						<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
-						<!-- <a class='delete' href='#'>&times;</a> -->
-						<input type="text" class="swatch-item__label" value="{{swatchLabel}}">
-					</div>
-					{{/each}}
-				<!-- 		<p class='actions'>
-						<a class='add button' href='#'>Add</a>
-					</p> -->
-				</section>
-			{{else}}
-				<section class="codeView">
-					{{codeText}}
-				</section>
-			{{/if}}
+			<section class='palette gridly {{paletteViewActive}}'>
+				{{#each swatches}}
+				<div class='swatch-item small'>
+					<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
+					<!-- <a class='delete' href='#'>&times;</a> -->
+					<input type="text" class="swatch-item__label" value="{{swatchLabel}}">
+				</div>
+				{{/each}}
+			<!-- 		<p class='actions'>
+					<a class='add button' href='#'>Add</a>
+				</p> -->
+			</section>
+			
+			<section class="codeView {{codeViewActive}}">
+				<form action="">
+					<textarea class="extract-code" name="" id="" >{{codeText}}</textarea>
+					<button>Re-Extract</button>
+				</form>
+			</section>
 		</div>
 		
 	</div>

@@ -9,19 +9,33 @@
 
 	p { margin-bottom: em(10); color: $gray-dark }
 
-	textarea {
-		font-family: "inconsolata",sans-serif;
-		font-size: 14px;
-		width: 100%;
-		padding: 1em;
-		min-height: 250px;
-		border-radius: 5px;
-		background: $gray-lightest;
 
-		&:focus {
-		  border-color: $form-border-color-focus;
-		  // box-shadow: $form-box-shadow-focus;
-		  outline: none;
-		}
+}
+
+textarea.extract-code {
+	font-family: "inconsolata",sans-serif;
+	font-size: 14px;
+	width: 100%;
+	padding: 1em;
+	min-height: 250px;
+	border-radius: 5px;
+	background: $gray-lightest;
+
+	&:focus {
+	  border-color: $form-border-color-focus;
+	  // box-shadow: $form-box-shadow-focus;
+	  outline: none;
+	}
+}
+
+.codeView .extract-code {
+	height: 550px;
+}
+
+.palette-content > * {
+	display: none;
+	
+	&.active {
+		display: inherit;
 	}
 }
