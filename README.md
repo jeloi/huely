@@ -1,9 +1,9 @@
 Huely
 =====
 
-Huely is a tool to pull the hex, rgb, and rgba values out of any code/text and visualize them in a palette.
+A tool to pull the hex, rgb, and rgba values out of any code/text and visualize them in a palette.
 
-Huely is for anyone who works with digital color.
+Built for anyone who works with digital color.
 
 ## Features
 - Sass & LESS Variable Name Extraction
@@ -19,7 +19,7 @@ Huely is for anyone who works with digital color.
 - Support for Sass/LESS variable referencing of other color variables
 - Add CSS Names support (e.g white, cyan, red, etc)
 - Ability to add and edit swatches w/ a color picker
-- Ability to export modified color values and variable names
+- Ability to export modified color values and variable names to a file
 - Serve a simple JSON API for extracted colors
 - Ability save/share palettes?
 
