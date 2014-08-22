@@ -1,6 +1,8 @@
 /* Helpers */
 Template.extract.helpers({
-
+	currentSample: function() {
+		return samples[Session.get("sampleIndex")];
+	}
 });
 
 /* Events */
@@ -13,8 +15,20 @@ Template.extract.events({
 		console.log(Session.get("code"));
 		Router.go('palette');
 		return false;
+	},
+	'click #cycleSample': function(e) {
+		console.log(Template.extract.currentSample());
+		console.log(Session.get("sampleIndex"));
+		// $('textarea.extract-code').text(Template.extract.currentSample());
+		$('textarea.extract-code').val(Template.extract.currentSample());
+		Session.set("sampleIndex", (Session.get("sampleIndex")+1)%samples.length);
+
 	}
 })
+
+Template.extract.rendered = function () {
+	Session.set("sampleIndex", 0);
+};
 
 
 Template.twitter.rendered = function () {
