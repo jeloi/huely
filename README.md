@@ -1,7 +1,7 @@
 Huely
 =====
 
-A tool to pull the hex, rgb, and rgba values out of any code/text and visualize them in a palette.
+A tool to pull the Hex, RGB, and RGBA values out of any text and visualize them in an organizable palette.
 
 Built for anyone who works with digital color.
 
@@ -33,6 +33,9 @@ Submit a pull request!
 ## Author
 
 Jeremy Ho
+
+## Credit
+Credit to Kevin Sylvestre's [jQuery Gridly](https://github.com/ksylvest/jquery-gridly) plugin.
 
 ## License
 
