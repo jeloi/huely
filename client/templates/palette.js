@@ -149,6 +149,31 @@ Template.palette.events({
 	},
 	'click .toolbar .toggle-codeView': function(event) {
 		Session.set("resultView", "code");
+	},
+
+	'click #re-extract': function(event) {
+		event.preventDefault();
+		var code = $("textarea.extract-code").val();
+		extractSwatches(code);
+		Session.set("code", code);
+		// console.log(Session.get("code"));
+		// Router.go('palette');
+		Session.set("resultView", "palette");
+		$('.gridly').gridly({
+		      base: 60, // px 
+		      gutter: 20, // px
+		      columns: 10,
+		      draggable: {
+		        zIndex: 800,
+		        selector: '> *'
+		      }
+		  });
+		$('.palette .swatch-item').each(function(index, el) {
+			setTimeout(function() {
+				$(el).addClass('fade-in');
+			}, Math.floor(index/5)*100);
+		});
+		return false;
 	}
 
 
