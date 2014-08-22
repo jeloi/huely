@@ -6,7 +6,7 @@ Template.palette.created = function () {
 
 	sessionGetSet("swatchStyle", "circle");
 	sessionGetSet("swatchLabel", "default");
-	Session.set("paletteView", "palette");
+	Session.set("resultView", "palette");
 	
 };
 
@@ -46,12 +46,16 @@ Template.palette.helpers({
 		}
 	},
 
+	codeText: function() {
+		return Session.get("code");
+	},
+
 	/* Toolbar Toggles */
 	paletteViewActive: function() {
-		return (Session.get("paletteView") == "code" ? "" : "active");
+		return (Session.get("resultView") == "code" ? "" : "active");
 	},
 	codeViewActive: function() {
-		return (Session.get("paletteView") == "code" ? "active" : "");
+		return (Session.get("resultView") == "code" ? "active" : "");
 	},
 	squareSwatchActive: function() {
 		return (Session.get("swatchStyle") == "square" ? "active" : "")
@@ -135,7 +139,15 @@ Template.palette.events({
 	},
 	'click .toolbar .toggle-colorVal': function(event) {
 		Session.set("swatchLabel", "colorVal");
+	},
+	'click .toolbar .toggle-paletteView': function(event) {
+		Session.set("resultView", "palette");
+	},
+	'click .toolbar .toggle-codeView': function(event) {
+		Session.set("resultView", "code");
 	}
+
+
 
 
 	//, 'click .add': function(event) {

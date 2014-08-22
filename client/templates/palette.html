@@ -1,6 +1,6 @@
 <template name="palette">
 	<div class="container">
-
+		<!-- Toolbar -->
 		<div class="toolbar">
 			<div class="toolbar__left u-float-left">
 				<div class="toolbar__toggle toggle-circle {{circleSwatchActive}}"><i class="fa fa-circle-thin"></i></div>
@@ -12,24 +12,33 @@
 			<div class="toolbar__center">{{swatchCount}} {{pluralize swatchCount "color" "colors"}}</div>
 
 			<div class="toolbar__right u-float-right">
-				<div class="toolbar__toggle {{paletteViewActive}}">Palette</div>
-				<div class="toolbar__toggle {{codeViewActive}}">Code</div>
+				<div class="toolbar__toggle toggle-paletteView {{paletteViewActive}}">Palette</div>
+				<div class="toolbar__toggle toggle-codeView {{codeViewActive}}">Code</div>
 			</div>
 
 
 		</div>
-
-		<section class='palette gridly'>
-			{{#each swatches}}
-			<div class='swatch-item small'>
-				<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
-				<!-- <a class='delete' href='#'>&times;</a> -->
-				<input type="text" class="swatch-item__label" value="{{swatchLabel}}">
-			</div>
-			{{/each}}
-		<!-- 		<p class='actions'>
-				<a class='add button' href='#'>Add</a>
-			</p> -->
-		</section>
+		
+		<div class="palette-content">
+			{{#if paletteViewActive }}
+				<section class='palette gridly'>
+					{{#each swatches}}
+					<div class='swatch-item small'>
+						<div class="swatch-item__swatch {{swatchStyle}}" style="background-color: {{colorVal}};"></div>
+						<!-- <a class='delete' href='#'>&times;</a> -->
+						<input type="text" class="swatch-item__label" value="{{swatchLabel}}">
+					</div>
+					{{/each}}
+				<!-- 		<p class='actions'>
+						<a class='add button' href='#'>Add</a>
+					</p> -->
+				</section>
+			{{else}}
+				<section class="codeView">
+					{{codeText}}
+				</section>
+			{{/if}}
+		</div>
+		
 	</div>
 </template>
