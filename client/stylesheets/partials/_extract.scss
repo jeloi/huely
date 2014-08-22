@@ -34,8 +34,37 @@ textarea.extract-code {
 
 .palette-content > * {
 	display: none;
-	
+
 	&.active {
 		display: inherit;
 	}
+}
+
+.fb-like, .twitter-share-button {
+  display: inline !important;
+  vertical-align: middle !important;
+}
+
+span.github {
+	position: relative;
+	top: 6px;
+	margin-left: -20px;
+}
+
+span.facebook {
+	position: relative;
+	top: -5px;
+}
+
+.share-links{
+	// position: absolute;
+	// left: 50%;
+	// margin-left: -160px;
+	width: 320px;
+	margin: 0 auto;
+	padding-left: 30px;
+}
+
+.footer {
+	margin-top: 50px;
 }

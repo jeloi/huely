@@ -19,7 +19,42 @@ Template.extract.events({
 
 Template.twitter.rendered = function () {
 
-	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	var template = this;
+
+	// Ajax load the twitter widgets.js, set a Session var twitter to true on complete
+	$.ajax('//platform.twitter.com/widgets.js', {dataType: 'script', cache: true})
+	  .done(function () { Session.set('twitter', true); });
+
+
+	  this.autorun(function () {
+	    var span = template.$('.twitter').empty();
+	    var twitterReady = Session.get('twitter');
+
+	    if (twitterReady) {
+	      span.append('	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout Huely - Visually extract colors from code" data-via="_Jeloi" data-related="_Jeloi">Tweet</a>');
+	      twttr.widgets.load(span.get(0));
+	    }
+	  });
+
+	// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+};
+
+Template.facebook.rendered = function () {
+	var template = this;
+
+	$.ajax('//connect.facebook.net/en_US/all.js', {dataType: 'script', cache: true})
+	.done(function () { FB.init({appId: '307468869424814', version: 'v2.0'}); Session.set('facebook', true); });
+
+	 this.autorun(function () {
+	   var span = template.$('.facebook').empty();
+	   var facebookReady = Session.get('facebook');
+
+	   if (facebookReady) {
+	     span.append('<div class="fb-like" data-share="false" data-layout="button_count"></div>');
+	     FB.XFBML.parse(span.get(0));
+	   }
+	 });
+
 };
 
 
