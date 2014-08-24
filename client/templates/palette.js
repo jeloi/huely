@@ -4,8 +4,8 @@ Template.palette.created = function () {
 		Router.go('extract')
 	};
 
-	sessionGetSet("swatchStyle", "circle");
-	sessionGetSet("swatchLabel", "default");
+	Session.setDefault("swatchStyle", "circle");
+	Session.setDefault("swatchLabel", "default");
 	Session.set("resultView", "palette");
 	
 };
