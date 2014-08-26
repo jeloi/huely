@@ -11,15 +11,14 @@ Template.extract.events({
 		e.preventDefault();
 		var code = $(".extract textarea").val();
 		extractSwatches(code);
-		Session.set("code", code);
-		console.log(Session.get("code"));
+		Session.set("text", code);
+		// console.log(Session.get("code"));
 		Router.go('palette');
 		return false;
 	},
 	'click #cycleSample': function(e) {
 		console.log(Template.extract.currentSample());
 		console.log(Session.get("sampleIndex"));
-		// $('textarea.extract-code').text(Template.extract.currentSample());
 		$('textarea.extract-code').val(Template.extract.currentSample());
 		Session.set("sampleIndex", (Session.get("sampleIndex")+1)%samples.length);
 
@@ -50,7 +49,6 @@ Template.twitter.rendered = function () {
 	    }
 	  });
 
-	// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 };
 
 Template.facebook.rendered = function () {

@@ -47,7 +47,7 @@ Template.palette.helpers({
 	},
 
 	codeText: function() {
-		return Session.get("code");
+		return Session.get("text");
 	},
 
 	/* Toolbar Toggles */
@@ -155,8 +155,8 @@ Template.palette.events({
 		event.preventDefault();
 		var code = $("textarea.extract-code").val();
 		extractSwatches(code);
-		Session.set("code", code);
-		// console.log(Session.get("code"));
+		Session.set("text", code);
+		console.log(Session.get("text"));
 		// Router.go('palette');
 		Session.set("resultView", "palette");
 		$('.gridly').gridly({
