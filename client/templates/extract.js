@@ -16,6 +16,10 @@ Template.extract.events({
 		if (paletteId) {
 			Session.set("text", code);
 			Router.go('palette', {_id: paletteId});
+		}
+		// Otherwise, if no colors were extracted
+		else {
+			console.log("no colors were extracted. do nothing for now.");
 		};
 		// console.log(Session.get("code"));
 		return false;
