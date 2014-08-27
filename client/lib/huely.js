@@ -48,7 +48,7 @@ Huely.extract = function(string) {
 		}
 	})
 	
-	// console.log(dict);
+	console.log(dict);
 
 	return dict;
 }

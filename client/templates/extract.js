@@ -10,10 +10,14 @@ Template.extract.events({
 	'click button': function(e) {
 		e.preventDefault();
 		var code = $(".extract textarea").val();
-		extractSwatches(code);
-		Session.set("text", code);
+		var paletteId = extractSwatches(code);
+		// If extractSwatches returns a paletteId (i.e colors were extracted)
+		console.log(paletteId);
+		if (paletteId) {
+			Session.set("text", code);
+			Router.go('palette', {_id: paletteId});
+		};
 		// console.log(Session.get("code"));
-		Router.go('palette');
 		return false;
 	},
 	'click #cycleSample': function(e) {

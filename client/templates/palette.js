@@ -1,13 +1,8 @@
 /* Callbacks */
 Template.palette.created = function () {
-	if (Swatches.find().count() == 0) {
-		Router.go('extract')
-	};
-
 	Session.setDefault("swatchStyle", "circle");
 	Session.setDefault("swatchLabel", "default");
 	Session.set("resultView", "palette");
-	
 };
 
 Template.palette.rendered = function () {
@@ -31,10 +26,10 @@ Template.palette.rendered = function () {
 /* Helpers */
 Template.palette.helpers({
 	swatches: function() {
-		return Swatches.find();
+		return this.swatches;
 	},
 	swatchCount: function() {
-		return Swatches.find().count();
+		return this.swatches.length;
 	},
 
 	/* General Utility helpers */
