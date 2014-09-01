@@ -15,20 +15,22 @@ Built for anyone who works with digital color.
 - CSS structured with BEM + Bourbon + Inuit.css
 
 ## Feature Roadmap
-- **Create a Sublime plugin to open a browser and visualize all colors in current file w/ Huely**
+Vote for features on the Huely Features Roadmap [Trello Board](https://trello.com/b/EkLqlZ6H/huely-co-features-roadmap)!
+
 - Support for Sass/LESS variable referencing of other color variables
 - Add CSS Names support (e.g white, cyan, red, etc)
 - Ability to add and edit swatches w/ a color picker
 - Ability to export modified color values and variable names to a file
 - Serve a simple JSON API for extracted colors
 - Ability save/share palettes?
+- [Done 8/27/14] **Create a Sublime plugin to open a browser and visualize all colors in current file w/ Huely**
 
 ## Contributing
 
-Submit feature requests through Github Issues.
-Any and all help in developing Huely into a productive tool to insert into web designers' or anyone's workflow is greatly appreciated!
-Once I release a (dead simple) API for linking to a Huely palette, I'd love some help offering very simple Huely plugins for text editors.
-Submit a pull request!
+Submit feature requests through Github Issues or on the [Trello Board](https://trello.com/b/EkLqlZ6H/huely-co-features-roadmap).
+
+Any and all help in making Huely into a productive tool to add to our design flows would be appreciated!
+Contact me @_Jeloi, or submit a pull request!
 
 ## Author
 
