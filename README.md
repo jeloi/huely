@@ -5,6 +5,8 @@ A tool to pull the Hex, RGB, and RGBA values out of any text and visualize them 
 
 Built for anyone who works with digital color.
 
+__If you're a Sublime Text user, download the [Huely Sublime Plugin!](https://github.com/Jeloi/huely-sublime-plugin)__
+
 ## Features
 - Sass & LESS Variable Name Extraction
 - Dragging for swatch reordering. Click to grow/shrink swatches.
