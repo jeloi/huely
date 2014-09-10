@@ -121,15 +121,19 @@ Template.palette.events({
 	},
 	/* Toolbar Toggles */
 	'click .toolbar .toggle-circle': function(event) {
+		Session.set("resultView", "palette");
 		Session.set("swatchStyle", "circle");
 	},
 	'click .toolbar .toggle-square': function(event) {
+		Session.set("resultView", "palette");
 		Session.set("swatchStyle", "square");
 	},
 	'click .toolbar .toggle-varName': function(event) {
+		Session.set("resultView", "palette");
 		Session.set("swatchLabel", "varName");
 	},
 	'click .toolbar .toggle-colorVal': function(event) {
+		Session.set("resultView", "palette");
 		Session.set("swatchLabel", "colorVal");
 	},
 	'click .toolbar .toggle-paletteView': function(event) {
