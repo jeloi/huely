@@ -27,8 +27,8 @@ $base-font-color: $gray-darker;
 $base-accent-color: #6BCA6A;
 
 // Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: pink;
+$base-link-color: #5AB0E0;
+$hover-link-color: darken($base-link-color, 10);
 $base-button-color: $base-accent-color;
 $hover-button-color: red;
 

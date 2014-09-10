@@ -47,26 +47,25 @@ textarea.extract-code {
 
 span.github {
 	position: relative;
-	top: 6px;
-	margin-left: -20px;
+	display: inline-block;
+	top: 5px;
+	margin-left: -28px;
 }
 
 span.facebook {
 	position: relative;
+	display: inline-block;
 	top: -5px;
 }
 
-.share-links{
-	// position: absolute;
-	// left: 50%;
-	// margin-left: -160px;
-	width: 320px;
-	margin: 0 auto;
-	padding-left: 30px;
+span.twitter {
+	display: inline-block;
 }
 
-.footer {
-	margin-top: 50px;
+.share-links{
+	text-align: center;
+	margin-top: 20px;
+	padding-left: 30px;
 }
 
 #cycleSample {
@@ -78,4 +77,10 @@ span.facebook {
 	&:hover {
 		color: $gray-darker;
 	}
+}
+
+.signature {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 0.9em;
 }
