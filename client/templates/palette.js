@@ -6,29 +6,22 @@ Template.palette.created = function () {
 };
 
 Template.palette.rendered = function () {
-	$('.gridly').gridly({
-	      base: 60, // px 
-	      gutter: 20, // px
-	      columns: 10,
-	      draggable: {
-	        zIndex: 800,
-	        selector: '> *'
-	      }
-	  });
-	$('.palette .swatch-item').each(function(index, el) {
-		setTimeout(function() {
-			$(el).addClass('fade-in');
-		}, Math.floor(index/5)*100);
-		
-	});
+	renderPalette();
 };
 
 /* Helpers */
 Template.palette.helpers({
 	swatches: function() {
-		return this.swatches;
+		console.log(this._id);
+		console.log(Palettes.findOne({_id: this._id}).swatches);
+
+		// Define reactive variable
+		var swatches = Palettes.findOne({_id: this._id}).swatches;
+		renderPalette();
+		return swatches;
 	},
 	swatchCount: function() {
+		// return Palettes.find(this._id).swatches.length;
 		return this.swatches.length;
 	},
 
@@ -42,7 +35,7 @@ Template.palette.helpers({
 	},
 
 	codeText: function() {
-		return Session.get("text");
+		return this.text;
 	},
 
 	/* Toolbar Toggles */
@@ -148,10 +141,13 @@ Template.palette.events({
 
 	'click #re-extract': function(event) {
 		event.preventDefault();
+		var self = this;
 		var code = $("textarea.extract-code").val();
-		extractSwatches(code);
+		// Extract swatches and update current palette
+		extractSwatches(code, this._id);
+		console.log(this._id);
 		Session.set("text", code);
-		console.log(Session.get("text"));
+		
 		// Router.go('palette');
 		Session.set("resultView", "palette");
 		$('.gridly').gridly({
